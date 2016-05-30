@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <include
+        android:id="@+id/progress_bar"
+        layout="@layout/progressbar" />
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvComments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/shadow_top"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/listitem_bt_size"
+            android:orientation="horizontal"
+            android:background="@color/send_comment_layout">
+            <EditText
+                android:id="@+id/send_comment_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/listitem_margin"/>
+            <Button
+                android:id="@+id/send_comment_bt"
+                android:layout_width="@dimen/send_comment_bt_width"
+                android:layout_height="@dimen/send_comment_bt_height"
+                android:background="@color/style_color_accent"
+                android:text="Send"
+                android:textColor="@color/cardview_bg_color"
+                android:layout_marginRight="@dimen/send_button_margin"
+                android:layout_marginLeft="@dimen/send_button_margin"
+                android:layout_marginBottom="@dimen/send_button_margin"
+                android:layout_marginTop="@dimen/send_button_margin"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

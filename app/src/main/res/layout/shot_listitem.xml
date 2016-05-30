@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/listitem_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/listitem_margin"
+    android:background="@color/cardview_bg_color"
+    card_view:cardCornerRadius="4dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.justkid.bain.justkidding.widget.CircleImageView
+                android:id="@+id/profile_avator"
+                android:layout_width="@dimen/btn_fab_size"
+                android:layout_height="@dimen/btn_fab_size"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="@dimen/listitem_margin"
+                android:layout_marginRight="@dimen/listitem_margin"
+                android:layout_marginTop="@dimen/listitem_margin"
+                android:layout_marginBottom="@dimen/listitem_margin"/>
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/style_color_primary"
+                android:text="@string/app_name"/>
+            <TextView
+                android:id="@+id/shot_created_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="@dimen/listitem_margin"
+                android:layout_weight="1"
+                android:textColor="@color/style_color_primary"
+                android:text="@string/app_name"/>
+        </LinearLayout>
+
+        <com.justkid.bain.justkidding.widget.SquaredImageView
+            android:id="@+id/squared_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/shot_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_fab_size"
+            android:layout_margin="@dimen/listitem_margin"
+            android:gravity="center_vertical"
+            android:textColor="@color/style_color_primary"
+            android:ellipsize="end"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_bottom_bg"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/like_the_shot"
+                android:layout_width="@dimen/listitem_bt_size"
+                android:layout_height="@dimen/listitem_bt_size"
+                android:background="@drawable/comment_ripple"
+                android:src="@drawable/ic_heart_grey"/>
+            <ImageButton
+                android:id="@+id/show_the_comment"
+                android:layout_width="@dimen/listitem_bt_size"
+                android:layout_height="@dimen/listitem_bt_size"
+                android:background="@drawable/comment_ripple"
+                android:src="@drawable/ic_comment_grey"/>
+            <ImageButton
+                android:id="@+id/show_the_more"
+                android:layout_width="@dimen/listitem_bt_size"
+                android:layout_height="@dimen/listitem_bt_size"
+                android:background="@drawable/comment_ripple"
+                android:src="@drawable/ic_more_grey"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_heart_small_purple" />
+
+                <TextSwitcher
+                    android:id="@+id/tsLikesCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/listitem_margin"
+                    android:layout_marginRight="@dimen/listitem_margin">
+
+                    <TextView
+                        android:id="@+id/the_praise_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123 likes"
+                        android:textColor="@color/style_color_primary" />
+                </TextSwitcher>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

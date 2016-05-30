@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/drawer_head">
+    <LinearLayout
+        android:id="@+id/drawer_head"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_head">
+
+        <com.justkid.bain.justkidding.widget.CircleImageView
+            android:id="@+id/head_avator"
+            android:layout_width="@dimen/drawer_avator"
+            android:layout_height="@dimen/drawer_avator"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin" />
+
+        <TextView
+            android:id="@+id/head_name"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:textColor="@color/style_color_primary"
+            android:text="Not logged in"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="#dddddd" />
+</FrameLayout>
